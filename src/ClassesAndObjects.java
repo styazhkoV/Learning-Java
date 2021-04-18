@@ -8,6 +8,10 @@ public class ClassesAndObjects {
         persone2.name = "Alex";
         persone2.age = 25;
         persone2.speek();
+        int year1 = persone1.calculateYersToReiterment();
+        int year2 = persone2.calculateYersToReiterment();
+        System.out.println("первому человеку до пенсии " + year1 + " лет");
+        System.out.println("второму человеку до пенсии " + year2 + " лет");
     }
 }
 
@@ -18,6 +22,10 @@ class Persone {
     String name;
     int age;
 
+    int calculateYersToReiterment(){
+        int yers = 65 - age;
+        return yers;
+    }
     void speek() { //метод
         for (int i = 0; i < 3; i++) {
             System.out.println("Меня зовут " + name + ", мне " + age + " лет");
